@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:mkwanja/screen/onboarding_screen/onboarding.dart';
+import 'package:mkwanja/screen/registration/register.dart';
+import 'package:mkwanja/screen/registration/verifyaccount.dart';
 import 'package:mkwanja/screen/welcome.dart';
 import 'package:mkwanja/theme/theme.dart';
 
@@ -16,6 +19,11 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: mkwanja(),
       home: const WelcomeScreen(),
+      routes: {
+        OnboardingScreen.id: (context) => OnboardingScreen(),
+        RegisterAccount.id: (context) => RegisterAccount(),
+        VerifyPin.id: (context) => const VerifyPin(),
+      },
     );
   }
 }

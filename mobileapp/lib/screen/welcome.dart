@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mkwanja/constant/constants.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:mkwanja/screen/onboarding_screen/onboarding.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({Key? key}) : super(key: key);
@@ -25,7 +26,9 @@ class WelcomeScreen extends StatelessWidget {
               height: 80,
             ),
             TextButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(context, OnboardingScreen.id);
+              },
               style: TextButton.styleFrom(
                 backgroundColor: kContentDarkTheme,
                 padding: const EdgeInsets.fromLTRB(48, 16, 48, 16),
