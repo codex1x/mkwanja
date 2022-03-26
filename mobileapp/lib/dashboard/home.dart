@@ -97,7 +97,7 @@ class _HomeDashboardState extends State<HomeDashboard> {
             color: kPrimaryColor,
             elevation: 5,
             child: Container(
-              margin: ,
+              margin: EdgeInsets.fromLTRB(25, 10, 25, 10),
               width: double.infinity,
               height: 400,
             ),
