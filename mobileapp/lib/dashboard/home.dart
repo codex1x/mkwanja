@@ -90,19 +90,131 @@ class _HomeDashboardState extends State<HomeDashboard> {
           ),
         ),
       ),
-      body: Column(
-        children: [
-          Material(
-            borderRadius: BorderRadius.circular(10),
-            color: kPrimaryColor,
-            elevation: 5,
-            child: Container(
-              margin: EdgeInsets.fromLTRB(25, 10, 25, 10),
-              width: double.infinity,
-              height: 400,
+      body: Padding(
+        padding: const EdgeInsets.fromLTRB(25, 80, 25, 0),
+        child: Column(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const CircleAvatar(
+                  child: Icon(
+                    Icons.person,
+                    size: 30,
+                  ),
+                  radius: 30,
+                ),
+                const SizedBox(
+                  width: 20,
+                ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Hamis",
+                      style: Theme.of(context)
+                          .textTheme
+                          .headline2!
+                          .copyWith(color: kPrimaryColor),
+                    ),
+                    Text(
+                      "Mohamed",
+                      style: Theme.of(context)
+                          .textTheme
+                          .bodyText2!
+                          .copyWith(color: kPrimaryColor),
+                    ),
+                  ],
+                )
+              ],
             ),
-          ),
-        ],
+            const SizedBox(
+              height: 45,
+            ),
+            Container(
+              width: double.infinity,
+              child: Material(
+                borderRadius: BorderRadius.circular(10),
+                color: kPrimaryColor,
+                elevation: 5,
+                child: Padding(
+                  padding: const EdgeInsets.all(18),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text("Current Amount Due"),
+                        Text(
+                          "1,000,000",
+                          style: Theme.of(context).textTheme.headline1,
+                        ),
+                        const SizedBox(
+                          height: 45,
+                        ),
+                        Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "Repayment Date",
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .bodyText2!
+                                      .copyWith(fontSize: 8),
+                                ),
+                                Text("2022-02-02"),
+                              ],
+                            ),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "Repayment Amount",
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .bodyText2!
+                                      .copyWith(fontSize: 8),
+                                ),
+                                Text("200,000 Tsh"),
+                              ],
+                            )
+                          ],
+                        ),
+                        const SizedBox(
+                          height: 45,
+                        ),
+                        TextButton(
+                          onPressed: () {
+                            // Navigator.pushNamed(context, RegisterUserAgent.id);
+                          },
+                          style: TextButton.styleFrom(
+                            backgroundColor: kContentDarkTheme,
+                            padding: const EdgeInsets.all(8),
+                          ),
+                          child: Text(
+                            "Pay Now",
+                            textAlign: TextAlign.center,
+                            style: Theme.of(context)
+                                .textTheme
+                                .headline5!
+                                .copyWith(color: kPrimaryColor),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
