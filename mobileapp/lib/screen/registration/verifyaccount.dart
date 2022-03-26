@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mkwanja/dashboard/home.dart';
 import 'package:pinput/pinput.dart';
 
 import '../../constant/constants.dart';
@@ -37,7 +38,7 @@ class VerifyPin extends StatelessWidget {
             Spacer(),
             TextButton(
               onPressed: () {
-                // Navigator.pushNamed(context, RegisterUserAgent.id);
+                Navigator.pushNamed(context, HomeDashboard.id);
               },
               style: TextButton.styleFrom(
                 backgroundColor: kPrimaryColor,
